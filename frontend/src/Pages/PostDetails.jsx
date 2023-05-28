@@ -7,7 +7,7 @@ const PostDetails = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/post/${id}`).then(response => {
+        fetch(`https://blog-application-backend-09l7.onrender.com/api/post/${id}`).then(response => {
             response.json().then(postDetails => {
                 setPostinfo(postDetails.data);
             })
@@ -18,7 +18,7 @@ const PostDetails = () => {
         console.log(id)
         let data = { 'postid': id }
         console.log(data)
-        const response = await fetch(`http://localhost:5000/api/post/${id}`, {
+        const response = await fetch(`https://blog-application-backend-09l7.onrender.com/api/post/${id}`, {
             method: 'DELETE',
             body: data
         })
@@ -50,7 +50,7 @@ const PostDetails = () => {
                 </div>
             </div>
             <div className="image">
-                <img src={`http://localhost:5000/${postinfo.cover}`} alt="" />
+                <img src={`https://blog-application-backend-09l7.onrender.com/${postinfo.cover}`} alt="" />
             </div>
             <div className='content' dangerouslySetInnerHTML={{ __html: postinfo.content }} />
         </div>

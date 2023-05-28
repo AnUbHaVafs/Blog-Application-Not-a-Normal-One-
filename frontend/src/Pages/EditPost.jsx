@@ -15,7 +15,7 @@ const EditPost = () => {
     const { id } = useParams();
     console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:5000/api/post/${id}`).then(response => {
+        fetch(`https://blog-application-backend-09l7.onrender.com/api/post/${id}`).then(response => {
             response.json().then(postdetails => {
                 console.log(postdetails)
                 setTitle(postdetails.data.title)
@@ -37,7 +37,7 @@ const EditPost = () => {
         }
 
         console.log(files)
-        const response = await fetch('http://localhost:5000/api/post', {
+        const response = await fetch('https://blog-application-backend-09l7.onrender.com/api/post', {
             method: 'PUT',
             body: data
         })
