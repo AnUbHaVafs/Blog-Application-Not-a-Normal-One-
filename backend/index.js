@@ -17,5 +17,5 @@ app.use('/api', require('./route/postRoutes'))
 
 
 app.listen(5000, () => {
-    console.log("to be started port : https://blog-application-backend-09l7.onrender.com")
+    console.log("to be started port : http://localhost:5000")
 });
