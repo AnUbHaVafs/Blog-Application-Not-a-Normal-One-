@@ -5,7 +5,7 @@ const HomePage = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://backend-blogs-application.onrender.com/api/post').then(response => {
+        fetch('http://localhost:5000/api/post').then(response => {
             response.json().then(posts => {
                 setPosts(posts.data);
             })

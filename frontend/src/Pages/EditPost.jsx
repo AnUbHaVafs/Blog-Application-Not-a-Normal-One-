@@ -15,7 +15,7 @@ const EditPost = () => {
     const { id } = useParams();
     console.log(id)
     useEffect(() => {
-        fetch(`https://backend-blogs-application.onrender.com/api/post/${id}`).then(response => {
+        fetch(`http://localhost:5000/api/post/${id}`).then(response => {
             response.json().then(postdetails => {
                 console.log(postdetails)
                 setTitle(postdetails.data.title)
