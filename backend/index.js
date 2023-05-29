@@ -17,7 +17,7 @@ app.get('/',(req, res)=>{
 })
 
 app.use(cors());
-app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/uploads', express.static("https://github.com/sophiya02/Blog-Application-Not-a-Normal-One-/tree/main/backend/uploads"));
 env.config();
 
 app.use('/api', require('./route/userRoutes'))
