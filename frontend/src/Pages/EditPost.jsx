@@ -15,7 +15,7 @@ const EditPost = () => {
     const { id } = useParams();
     console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:5000/api/post/${id}`).then(response => {
+        fetch(`https://anubhav-blog-backend.onrender.com/api/post/${id}`).then(response => {
             response.json().then(postdetails => {
                 console.log(postdetails)
                 setTitle(postdetails.data.title)

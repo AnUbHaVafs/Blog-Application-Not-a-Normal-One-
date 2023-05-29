@@ -7,7 +7,7 @@ const PostDetails = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/post/${id}`).then(response => {
+        fetch(`https://anubhav-blog-backend.onrender.com/api/post/${id}`).then(response => {
             response.json().then(postDetails => {
                 setPostinfo(postDetails.data);
             })
@@ -18,7 +18,7 @@ const PostDetails = () => {
         console.log(id)
         let data = { 'postid': id }
         console.log(data)
-        const response = await fetch(`http://localhost:5000/api/post/${id}`, {
+        const response = await fetch(`https://anubhav-blog-backend.onrender.com/api/post/${id}`, {
             method: 'DELETE',
             body: data
         })

@@ -5,7 +5,7 @@ const RegisterPage = () => {
     const [password, setPassword] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:5000/api/register', {
+        await fetch('https://anubhav-blog-backend.onrender.com/api/register', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: { 'Content-Type': 'application/json' },
