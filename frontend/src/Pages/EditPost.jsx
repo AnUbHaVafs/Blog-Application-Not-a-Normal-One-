@@ -37,7 +37,7 @@ const EditPost = () => {
         }
 
         console.log(files)
-        const response = await fetch('https://backend-blogs-application.onrender.com/api/post', {
+        const response = await fetch('http://localhost:5000/api/post', {
             method: 'PUT',
             body: data
         })

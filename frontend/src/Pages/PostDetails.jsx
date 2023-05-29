@@ -50,7 +50,7 @@ const PostDetails = () => {
                 </div>
             </div>
             <div className="image">
-                <img src={`https://backend-blogs-application.onrender.com/${postinfo.cover}`} alt="" />
+                <img src={`https://localhost:5000/${postinfo.cover}`} alt="" />
             </div>
             <div className='content' dangerouslySetInnerHTML={{ __html: postinfo.content }} />
         </div>
